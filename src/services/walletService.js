@@ -1,54 +1,42 @@
 const axios = require('axios');
+require('dotenv').config();
 
 const HELIUS_API_KEY = process.env.HELIUS_API_KEY;
+const HELIUS_URL = `https://api.helius.xyz/v0/addresses`;
 
-async function getSignatures(address, limit = 20) {
-  const url = `https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}`;
-  
-  const payload = {
-    jsonrpc: "2.0",
-    id: 1,
-    method: "getSignaturesForAddress",
-    params: [address, { limit }]
-  };
+async function fetchWalletData(walletAddress) {
+  const url = `${HELIUS_URL}/${walletAddress}/transactions?api-key=${HELIUS_API_KEY}`;
 
   try {
-    const { data } = await axios.post(url, payload);
-    return data.result;
+    const response = await axios.get(url);
+    const transactions = response.data;
+
+    const summary = {
+      totalTransfers: transactions.filter(tx => tx.type === 'TRANSFER').length,
+      totalSwaps: transactions.filter(tx => tx.type === 'SWAP').length,
+      totalIn: 0,
+      totalOut: 0,
+      tokensIn: {},
+      tokensOut: {},
+    };
+
+    transactions.forEach(tx => {
+      tx.tokenTransfers.forEach(transfer => {
+        if (transfer.toUserAccount === walletAddress) {
+          summary.totalIn += transfer.amount;
+          summary.tokensIn[transfer.tokenSymbol] = (summary.tokensIn[transfer.tokenSymbol] || 0) + transfer.amount;
+        } else if (transfer.fromUserAccount === walletAddress) {
+          summary.totalOut += transfer.amount;
+          summary.tokensOut[transfer.tokenSymbol] = (summary.tokensOut[transfer.tokenSymbol] || 0) + transfer.amount;
+        }
+      });
+    });
+
+    return { summary, rawTransactions: transactions };
   } catch (error) {
-    console.error('Helius getSignatures error:', error.response.data);
-    throw error;
+    console.error('Error fetching data:', error.message);
+    throw new Error('Failed to fetch wallet data');
   }
 }
 
-async function getTransactions(signatures) {
-  const url = `https://api.helius.xyz/v0/transactions?api-key=${HELIUS_API_KEY}`;
-
-  const payload = { transactions: signatures };
-
-  try {
-    const { data } = await axios.post(url, payload);
-    return data;
-  } catch (error) {
-    console.error('Helius getTransactions error:', error.response.data);
-    throw error;
-  }
-}
-
-async function getWalletTransactions(address, limit = 20) {
-  try {
-    const signatureObjects = await getSignatures(address, limit);
-    const signatures = signatureObjects.map(sigObj => sigObj.signature);
-    
-    const transactions = await getTransactions(signatures);
-    
-    return transactions;
-  } catch (error) {
-    console.error('Helius wallet fetch error:', error.response?.data || error.message);
-    return [];
-  }
-}
-
-module.exports = {
-  getWalletTransactions,
-};
+module.exports = { fetchWalletData };
