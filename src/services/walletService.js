@@ -8,17 +8,15 @@ const getWalletTransactions = async (walletAddress) => {
   try {
     const url = `${HELIUS_API_URL}/${walletAddress}/transactions?api-key=${HELIUS_API_KEY}`;
     const response = await axios.get(url);
-
-    if (response.data.error) {
-      console.error("Helius API error:", response.data.error);
-      return [];
-    }
-
-    return response.data;
+    return response.data || [];
   } catch (error) {
     console.error("Helius wallet fetch error:", error.response ? error.response.data : error.message);
     return [];
   }
+};
+
+const parseAmount = (amount, decimals = 9) => {
+  return amount / (10 ** decimals);
 };
 
 const getWalletSummary = (transactions, walletAddress) => {
@@ -33,7 +31,9 @@ const getWalletSummary = (transactions, walletAddress) => {
 
     tx.tokenTransfers.forEach((transfer) => {
       const mint = transfer.mint;
-      const amount = transfer.amount || 0;
+      const amountRaw = transfer.tokenAmount || transfer.amount || 0;
+      const decimals = transfer.tokenDecimals || 9; // Default to 9 decimals (SOL standard)
+      const amount = parseAmount(amountRaw, decimals);
       const owner = transfer.toUserAccount || '';
 
       if (owner === walletAddress) {
