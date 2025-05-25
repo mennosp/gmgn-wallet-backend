@@ -21,6 +21,40 @@ const getWalletTransactions = async (walletAddress) => {
   }
 };
 
+const getWalletSummary = (transactions, walletAddress) => {
+  let totalTransfers = 0;
+  let totalSwaps = 0;
+  let tokensIn = {};
+  let tokensOut = {};
+
+  transactions.forEach((tx) => {
+    if (tx.type === 'TRANSFER') totalTransfers++;
+    if (tx.type === 'SWAP') totalSwaps++;
+
+    tx.tokenTransfers.forEach((transfer) => {
+      const mint = transfer.mint;
+      const amount = transfer.amount || 0;
+      const owner = transfer.toUserAccount || '';
+
+      if (owner === walletAddress) {
+        tokensIn[mint] = (tokensIn[mint] || 0) + amount;
+      } else {
+        tokensOut[mint] = (tokensOut[mint] || 0) + amount;
+      }
+    });
+  });
+
+  return {
+    totalTransfers,
+    totalSwaps,
+    totalIn: Object.keys(tokensIn).length,
+    totalOut: Object.keys(tokensOut).length,
+    tokensIn,
+    tokensOut,
+  };
+};
+
 module.exports = {
   getWalletTransactions,
+  getWalletSummary,
 };
