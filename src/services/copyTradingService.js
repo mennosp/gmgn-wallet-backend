@@ -1,45 +1,41 @@
-const { getWalletTransactions } = require('./walletService');
-const { analyzeWalletTransactions } = require('../utils/transactionAnalyzer');
-const { executeSwapTrade } = require('./tradeExecutionService');
+const { analyzeWallet } = require('./walletService');
+const { executeSwap } = require('./tradeExecutionService');
 
-const TOP_WALLETS = [
-  'DqJSyghFZXRWj9eRVMfNWaTvMV7Emkhp6soV4iTVsLhM', // Replace with real top wallets later
-];
+async function evaluateWalletForCopying(walletAddress, myWalletPrivateKey) {
+  const analysis = await analyzeWallet(walletAddress);
 
-// Your trading wallet public key (replace with your real key)
-const MY_PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE';
-
-async function getTopWalletTrades() {
-  const significantTrades = [];
-
-  for (const wallet of TOP_WALLETS) {
-    const txs = await getWalletTransactions(wallet, 50);
-    const analyzed = analyzeWalletTransactions(txs);
-
-    txs.forEach(async (tx) => {
-      if (tx.type === 'SWAP' && tx.tokenTransfers.some(t => t.amount > 1000)) {
-        significantTrades.push({ wallet, tx });
-
-        // Trigger trade execution (simulated for now)
-        try {
-          const swapResult = await executeSwapTrade(
-            tx.tokenTransfers[0].mint,  // inputMint
-            tx.tokenTransfers[1].mint,  // outputMint
-            tx.tokenTransfers[0].amount, // amount
-            MY_PUBLIC_KEY
-          );
-
-          console.log('Trade executed successfully:', swapResult);
-        } catch (e) {
-          console.error('Trade execution failed:', e.message);
-        }
-      }
-    });
+  if (!analysis) {
+    console.error('No analysis data found for wallet:', walletAddress);
+    return { shouldCopy: false };
   }
 
-  return significantTrades;
+  const shouldCopy = parseFloat(analysis.winRate) >= 70; // Copy wallets with a win rate of 70% or higher
+
+  if (shouldCopy) {
+    console.log(`High-performing wallet detected (${analysis.winRate}% win rate). Copying trades...`);
+
+    // Example token addresses (change these accordingly)
+    const tokenIn = 'So11111111111111111111111111111111111111112'; // SOL
+    const tokenOut = 'ydJLarZFLYHYSEm95ToxhHDQWkLdRZXF1mSaQxTamQP'; // Replace this with your target token address
+    const amountIn = 0.1; // Amount to swap (adjust based on your preference)
+
+    try {
+      const swapResult = await executeSwap(myWalletPrivateKey, tokenIn, tokenOut, amountIn);
+      console.log('Trade successfully copied:', swapResult);
+    } catch (error) {
+      console.error('Error executing swap:', error);
+      return { shouldCopy, error: error.message };
+    }
+  } else {
+    console.log(`Wallet ${walletAddress} did not meet copy criteria. Win rate: ${analysis.winRate}%`);
+  }
+
+  return {
+    walletAddress,
+    shouldCopy,
+    winRate: analysis.winRate,
+    totalTrades: analysis.totalTrades,
+  };
 }
 
-module.exports = {
-  getTopWalletTrades,
-};
+module.exports = { evaluateWalletForCopying };

@@ -1,18 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const { getWalletTransactions, getWalletSummary } = require('../services/walletService');
+const { analyzeWallet } = require('../services/walletService');
+const { evaluateWalletForCopying } = require('../services/copyTradingService');
 
 router.get('/wallet/:address', async (req, res) => {
-  const address = req.params.address;
+  const walletAddress = req.params.address;
 
   try {
-    const transactions = await getWalletTransactions(address);
-    const summary = getWalletSummary(transactions, address);
+    const trades = await analyzeWallet(walletAddress);
+    const evaluation = await evaluateWalletForCopying(walletAddress);
 
-    res.json({ summary, rawTransactions: transactions });
+    res.status(200).json({
+      walletAddress,
+      analysis: trades,
+      evaluation
+    });
   } catch (error) {
-    console.error("Error in /wallet/:address:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    console.error(`Error in /wallet/:address:`, error);
+    res.status(500).send('Internal Server Error');
   }
 });
 

@@ -1,32 +1,19 @@
-const { analyzeWallet } = require('../services/walletService');
-
-const walletsToAnalyze = [
-  '52dq6ajenMwfVz5FYuPKKRzzjkW83Aa85X5xJgFHX7U1',
-  'another_wallet_address_here',
-  'yet_another_wallet_address_here'
-];
+require('dotenv').config();
+const { analyzeWallet } = require('../src/scripts/analyze');
 
 async function main() {
-  const results = [];
-
-  for (const wallet of walletsToAnalyze) {
-    console.log(`Analyzing wallet: ${wallet}`);
-    const analysis = await analyzeWallet(wallet);
-    if (analysis) {
-      results.push(analysis);
-      console.log(`✅ ${wallet} - Win Rate: ${analysis.winRate}%, Total Trades: ${analysis.totalTrades}`);
-    } else {
-      console.log(`❌ Failed to analyze wallet ${wallet}`);
-    }
+  const walletAddress = process.argv[2];
+  if (!walletAddress) {
+    console.error('Please provide a wallet address.');
+    process.exit(1);
   }
 
-  results.sort((a, b) => b.winRate - a.winRate);
-  console.log('\n🔥 Wallet Ranking by Win Rate:');
-  results.forEach(({ wallet, winRate, totalTrades }, idx) => {
-    console.log(`${idx + 1}. ${wallet} - Win Rate: ${winRate}% (${totalTrades} trades)`);
-  });
+  try {
+    const analysis = await analyzeWallet(walletAddress);
+    console.log('Analysis Results:', analysis);
+  } catch (error) {
+    console.error('Error analyzing wallet:', error);
+  }
 }
 
-main().catch((error) => {
-  console.error('Error during analysis:', error);
-});
+main();
