@@ -16,7 +16,7 @@ async function evaluateWalletForCopying(walletAddress, myWalletPrivateKey) {
 
     // Example token addresses (change these accordingly)
     const tokenIn = 'So11111111111111111111111111111111111111112'; // SOL
-    const tokenOut = 'ydJLarZFLYHYSEm95ToxhHDQWkLdRZXF1mSaQxTamQP'; // Replace this with your target token address
+    const tokenOut = 'CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1'; // Replace this with your target token address
     const amountIn = 0.1; // Amount to swap (adjust based on your preference)
 
     try {
