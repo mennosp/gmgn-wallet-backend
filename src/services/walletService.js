@@ -2,59 +2,46 @@ const axios = require('axios');
 require('dotenv').config();
 
 const HELIUS_API_KEY = process.env.HELIUS_API_KEY;
-const HELIUS_API_URL = `https://api.helius.xyz/v0/addresses`;
 
-const getWalletTransactions = async (walletAddress) => {
+async function fetchWalletTrades(wallet) {
   try {
-    const url = `${HELIUS_API_URL}/${walletAddress}/transactions?api-key=${HELIUS_API_KEY}`;
-    const response = await axios.get(url);
-    return response.data || [];
+    const { data } = await axios.get(
+      `https://api.helius.xyz/v0/addresses/${wallet}/transactions?api-key=${HELIUS_API_KEY}`
+    );
+    return data;
   } catch (error) {
-    console.error("Helius wallet fetch error:", error.response ? error.response.data : error.message);
+    console.error(`Error fetching trades for wallet ${wallet}:`, error.message);
     return [];
   }
-};
+}
 
-const parseAmount = (amount, decimals = 9) => {
-  return amount / (10 ** decimals);
-};
+async function analyzeWallet(wallet) {
+  const trades = await fetchWalletTrades(wallet);
+  if (!trades.length) return null;
 
-const getWalletSummary = (transactions, walletAddress) => {
-  let totalTransfers = 0;
-  let totalSwaps = 0;
-  let tokensIn = {};
-  let tokensOut = {};
+  let profitableTrades = 0;
+  let totalTrades = 0;
 
-  transactions.forEach((tx) => {
-    if (tx.type === 'TRANSFER') totalTransfers++;
-    if (tx.type === 'SWAP') totalSwaps++;
+  trades.forEach((trade) => {
+    if (trade.type === 'SWAP') {
+      totalTrades++;
+      const inputAmount = parseFloat(trade.tokenTransfers[0]?.amount || 0);
+      const outputAmount = parseFloat(trade.tokenTransfers[1]?.amount || 0);
 
-    tx.tokenTransfers.forEach((transfer) => {
-      const mint = transfer.mint;
-      const amountRaw = transfer.tokenAmount || transfer.amount || 0;
-      const decimals = transfer.tokenDecimals || 9; // Default to 9 decimals (SOL standard)
-      const amount = parseAmount(amountRaw, decimals);
-      const owner = transfer.toUserAccount || '';
-
-      if (owner === walletAddress) {
-        tokensIn[mint] = (tokensIn[mint] || 0) + amount;
-      } else {
-        tokensOut[mint] = (tokensOut[mint] || 0) + amount;
-      }
-    });
+      if (outputAmount > inputAmount) profitableTrades++;
+    }
   });
 
+  const winRate = totalTrades ? (profitableTrades / totalTrades) * 100 : 0;
+
   return {
-    totalTransfers,
-    totalSwaps,
-    totalIn: Object.keys(tokensIn).length,
-    totalOut: Object.keys(tokensOut).length,
-    tokensIn,
-    tokensOut,
+    wallet,
+    winRate: winRate.toFixed(2),
+    totalTrades,
   };
-};
+}
 
 module.exports = {
-  getWalletTransactions,
-  getWalletSummary,
+  fetchWalletTrades,
+  analyzeWallet,
 };

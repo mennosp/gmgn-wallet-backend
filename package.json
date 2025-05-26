@@ -1,21 +1,18 @@
 {
-  "name": "backend",
+  "name": "gmgn-wallet-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "GMGN Wallet Backend API",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "analyze": "node src/scripts/analyze.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "axios": "^1.9.0",
+    "axios": "^1.6.8",
     "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
   }
 }
