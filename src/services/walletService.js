@@ -1,47 +1,43 @@
-const axios = require('axios');
+const { Connection, PublicKey } = require('@solana/web3.js');
 require('dotenv').config();
 
-const HELIUS_API_KEY = process.env.HELIUS_API_KEY;
+const QUICKNODE_RPC_URL = process.env.QUICKNODE_RPC_URL;
+const connection = new Connection(QUICKNODE_RPC_URL, { 
+  commitment: 'confirmed', 
+  maxSupportedTransactionVersion: 0 
+});
 
-async function fetchWalletTrades(wallet) {
-  try {
-    const { data } = await axios.get(
-      `https://api.helius.xyz/v0/addresses/${wallet}/transactions?api-key=${HELIUS_API_KEY}`
-    );
-    return data;
-  } catch (error) {
-    console.error(`Error fetching trades for wallet ${wallet}:`, error.message);
-    return [];
+async function analyzeWallet(walletAddress) {
+  const publicKey = new PublicKey(walletAddress);
+
+  const signatures = await connection.getSignaturesForAddress(publicKey, { limit: 100 });
+
+  let totalTrades = signatures.length;
+  let wins = 0;
+
+  for (const sig of signatures) {
+    const txDetails = await connection.getParsedTransaction(sig.signature, {
+      commitment: 'confirmed',
+      maxSupportedTransactionVersion: 0
+    });
+
+    if (!txDetails) continue;
+
+    let preBalance = txDetails.meta.preBalances.reduce((a, b) => a + b, 0);
+    let postBalance = txDetails.meta.postBalances.reduce((a, b) => a + b, 0);
+
+    if (postBalance > preBalance) wins += 1;
   }
-}
 
-async function analyzeWallet(wallet) {
-  const trades = await fetchWalletTrades(wallet);
-  if (!trades.length) return null;
-
-  let profitableTrades = 0;
-  let totalTrades = 0;
-
-  trades.forEach((trade) => {
-    if (trade.type === 'SWAP') {
-      totalTrades++;
-      const inputAmount = parseFloat(trade.tokenTransfers[0]?.amount || 0);
-      const outputAmount = parseFloat(trade.tokenTransfers[1]?.amount || 0);
-
-      if (outputAmount > inputAmount) profitableTrades++;
-    }
-  });
-
-  const winRate = totalTrades ? (profitableTrades / totalTrades) * 100 : 0;
+  const winRate = totalTrades ? ((wins / totalTrades) * 100).toFixed(2) : "0.00";
 
   return {
-    wallet,
-    winRate: winRate.toFixed(2),
-    totalTrades,
+    wallet: walletAddress,
+    winRate,
+    totalTrades
   };
 }
 
 module.exports = {
-  fetchWalletTrades,
-  analyzeWallet,
+  analyzeWallet
 };
