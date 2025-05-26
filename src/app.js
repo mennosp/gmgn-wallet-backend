@@ -33,6 +33,6 @@ app.get('/api/wallet/:walletAddress', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 10000;
-app.listen(PORT, () => {
+app.listen(10000, () => {
   console.log(`Server is live on http://localhost:${PORT}`);
 });
