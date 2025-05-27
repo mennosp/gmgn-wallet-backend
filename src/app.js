@@ -69,6 +69,6 @@ app.get('/api/quote', async (req, res) => {
 
 // Server listener
 const PORT = process.env.PORT || 10000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is live on http://localhost:${PORT}`);
 });
