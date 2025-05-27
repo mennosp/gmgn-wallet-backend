@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 const { Connection, Keypair } = require('@solana/web3.js');
@@ -15,6 +16,14 @@ const jupiterApi = createJupiterApiClient();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Root route to serve index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Endpoint to analyze a wallet and evaluate trading
 app.get('/api/wallet/:walletAddress', async (req, res) => {
@@ -63,4 +72,3 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`Server is live on http://localhost:${PORT}`);
 });
-
