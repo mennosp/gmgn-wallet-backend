@@ -18,11 +18,11 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Root route to serve index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
 // Endpoint to analyze a wallet and evaluate trading
