@@ -1,4 +1,6 @@
 .env
 node_modules/
 key-converter.js
-.DS_Storesrc/traderLogs.json
+.DS_Store
+src/traderLogs.json
+qualified_wallets.json
