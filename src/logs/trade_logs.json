@@ -1,0 +1,440 @@
+[
+  {
+    "timestamp": "2025-05-27T08:15:59.767Z",
+    "walletPublicKey": "<your-wallet-public-key>",
+    "inputMint": "<input-token-address>",
+    "outputMint": "<output-token-address>",
+    "inputAmount": 1000000,
+    "status": "failed",
+    "error": "Non-base58 character"
+  },
+  {
+    "timestamp": "2025-05-27T08:19:14.144Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 1000000,
+    "status": "failed",
+    "error": "Cannot read properties of undefined (reading 'load')"
+  },
+  {
+    "timestamp": "2025-05-27T08:23:46.790Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 1000000,
+    "status": "failed",
+    "error": "Response returned an error code"
+  },
+  {
+    "timestamp": "2025-05-27T08:24:09.822Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 1000000,
+    "status": "failed",
+    "error": "Response returned an error code"
+  },
+  {
+    "timestamp": "2025-05-27T08:24:19.457Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 1000000,
+    "status": "failed",
+    "error": "Response returned an error code"
+  },
+  {
+    "timestamp": "2025-05-27T08:26:42.391Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Response returned an error code"
+  },
+  {
+    "timestamp": "2025-05-27T08:28:20.256Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Response returned an error code"
+  },
+  {
+    "timestamp": "2025-05-27T08:30:41.854Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7 is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-27T08:32:31.286Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-27T08:36:40.712Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-27T08:38:55.843Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-27T23:27:05.558Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-27T23:30:00.237Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "DezXAz4fT8MgBPxuRxkRbMTB46C9v2Ukqkk6jBB5FB9e",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token DezXAz4fT8MgBPxuRxkRbMTB46C9v2Ukqkk6jBB5FB9e is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-27T23:38:24.924Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "UNAUTHORIZED",
+      "instance": "practical-blissful-diamond",
+      "request-id": ""
+    }
+  },
+  {
+    "timestamp": "2025-05-27T23:55:07.904Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Bad Request\n"
+  },
+  {
+    "timestamp": "2025-05-27T23:58:55.754Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Bad Request\n"
+  },
+  {
+    "timestamp": "2025-05-28T00:01:01.232Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Bad Request\n"
+  },
+  {
+    "timestamp": "2025-05-28T00:03:09.246Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Bad Request\n"
+  },
+  {
+    "timestamp": "2025-05-28T00:05:35.934Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "jsonrpc": "2.0",
+      "id": null,
+      "error": {
+        "code": -32604,
+        "message": "this request method is not supported"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-28T00:19:23.959Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Bad Request\n"
+  },
+  {
+    "timestamp": "2025-05-28T00:21:16.941Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "jsonrpc": "2.0",
+      "id": null,
+      "error": {
+        "code": -32604,
+        "message": "this request method is not supported"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-05-28T00:23:24.147Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": "Bad Request\n"
+  },
+  {
+    "timestamp": "2025-05-28T00:29:40.963Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "timestamp": "2025-05-28T00:49:30.875Z",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "inputMint": "So11111111111111111111111111111111111111112",
+    "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+    "inputAmount": 10000000,
+    "status": "failed",
+    "error": {
+      "error": "The token EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a is not tradable",
+      "errorCode": "TOKEN_NOT_TRADABLE"
+    }
+  },
+  {
+    "tradeId": "trade_1748393918644",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T00:58:38.491Z",
+      "failed": "2025-05-28T00:58:38.643Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a",
+      "inputAmount": 10000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": {
+        "error": "The token EPjFWdd5AufqSSqeM2qXwusjB3do5hAsXzZgQdj9w1a is not tradable",
+        "errorCode": "TOKEN_NOT_TRADABLE"
+      },
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748423561654",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:12:41.654Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "7vfCXTWiV9pZC4sEyoCVoouAb7EqqANi2FtocLzYhuU",
+      "inputAmount": 10000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748423944567",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:19:04.567Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "7vfCXTWiV9pZC4sEyoCVoouAb7EqqANi2FtocLzYhuU",
+      "inputAmount": 10000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748424123783",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:22:03.783Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+      "inputAmount": 1000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748424226101",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:23:46.101Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+      "inputAmount": 1000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748424510067",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:28:30.067Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+      "inputAmount": 1000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748424688472",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:31:28.472Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+      "inputAmount": 1000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  },
+  {
+    "tradeId": "trade_1748425127616",
+    "walletPublicKey": "CqyPJB66ZWraRjXJVmyUv6x9Xnj9kymTJJtkNpiJA9u1",
+    "timestamps": {
+      "initiated": "2025-05-28T09:38:47.616Z"
+    },
+    "status": "failed",
+    "tradeDetails": {
+      "inputMint": "So11111111111111111111111111111111111111112",
+      "outputMint": "Es9vMFrzaCERJXV12U5gSHkEKv7adNiXpwZPF61E1W7",
+      "inputAmount": 1000000,
+      "outputAmount": null,
+      "slippageBps": null,
+      "actualSlippagePct": null,
+      "fees": null,
+      "routeDetails": []
+    },
+    "errors": {
+      "message": "Request failed with status code 404",
+      "type": "UnknownError"
+    }
+  }
+]

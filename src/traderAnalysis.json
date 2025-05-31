@@ -1,0 +1,667 @@
+[
+  {
+    "walletAddress": "GvFbpZcqXNoZbAH8ETAA4DYBzaEHY4v2Vt7r71ZqJCTc",
+    "totalTrades": 65,
+    "winRate": 24.62,
+    "realizedPnL": 3.19,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "BrcVoc5gc92Ga4h5mq9zQBLGM6UdfRpCrVkDgQGpRqDm",
+    "totalTrades": 65,
+    "winRate": 0,
+    "realizedPnL": -0.48,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "APkGv3PxJWbTNc7x5mPGUhNdnq95HH4p2qzxBMj3fjYY",
+    "totalTrades": 57,
+    "winRate": 0,
+    "realizedPnL": 0.02,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "4oRHcYBLK8fRzQdhodaMCCqbFngUyw2qjF4LaAx9umfw",
+    "totalTrades": 10,
+    "winRate": 10,
+    "realizedPnL": 0.3,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5EdumqmLGgGmJJgArvnCrFzbnBMXBkJbpxc5AUUrGdjM",
+    "totalTrades": 55,
+    "winRate": 0,
+    "realizedPnL": -1.71,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "NcLasxSu3sq921FhBniNniiQVzjSVcQk56nB26WTqG7",
+    "totalTrades": 65,
+    "winRate": 67.69,
+    "realizedPnL": 0.46,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "G2EFu9qt2PcfKD172ZQVh1QpqtdJDzaXxvZmdHYZUM91",
+    "totalTrades": 65,
+    "winRate": 0,
+    "realizedPnL": 7.56,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7rtiKSUDLBm59b1SBmD9oajcP8xE64vAGSMbAN5CXy1q",
+    "totalTrades": 65,
+    "winRate": 36.92,
+    "realizedPnL": 0.02,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "DNH6Dc5kA368WKjdZi5Vh48iyEHzMtiRkTVFrwZh9JFf",
+    "totalTrades": 65,
+    "winRate": 40,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "6k7WjU9UGEdgTAsiiFPwRo1oJH1DebruV8GiWEt2bnUt",
+    "totalTrades": 65,
+    "winRate": 40,
+    "realizedPnL": 1.75,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "WrongZ9qs1v21vP4bnzUxsra61JzY5KD33TFCTDZVJx",
+    "totalTrades": 54,
+    "winRate": 3.7,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "AhpyzAnNFWDQq17hbCZoRwtun1TCZ46aAv1DZGQz4w5V",
+    "totalTrades": 65,
+    "winRate": 12.31,
+    "realizedPnL": 0.12,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "GRmnNGy6ykjhystBLQqeD2pjgysBZzqzfXGjuocAKsyv",
+    "totalTrades": 13,
+    "winRate": 0,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "2hfmUnqy77e8wjQqi8oNhxtbnTjTs2bALoamLS6jjX3x",
+    "totalTrades": 46,
+    "winRate": 0,
+    "realizedPnL": 4.03,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "x23VTahmmVUcvhuRzDHUyycQ5Tedy5b2HTeC6HUru6N",
+    "totalTrades": 55,
+    "winRate": 3.64,
+    "realizedPnL": 1.87,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "ATKnPPL95KcKYQkELtiNhGeYjPNPQT49pnFQAiqN7h2L",
+    "totalTrades": 55,
+    "winRate": 65.45,
+    "realizedPnL": 15.76,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7tQ6zKDC1XCf33W8f9fXPcecryZNa86GNefptgNrEC56",
+    "totalTrades": 11,
+    "winRate": 27.27,
+    "realizedPnL": 0.01,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "BKRu7LmcpstcYmYLc1T5RYAmuxgii3VPZwHDwdCxCJKD",
+    "totalTrades": 48,
+    "winRate": 0,
+    "realizedPnL": 0.01,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "CujGG3HXK7kPP8D4cFPJHqK4z6tMgMEC1ZaBm3p11WuL",
+    "totalTrades": 51,
+    "winRate": 0,
+    "realizedPnL": 3.72,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "FNWw3a6kwnc89CtLV6qihBAxSZYY6oosKCf5L3rcfmdM",
+    "totalTrades": 55,
+    "winRate": 0,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "6eT6tdrCxKLb58B4imgeRJ2eSzYidjdxMrZKGHkNok9w",
+    "totalTrades": 55,
+    "winRate": 3.64,
+    "realizedPnL": 0.44,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "YubQzu18FDqJRyNfG8JqHmsdbxhnoQqcKUHBdUkN6tP",
+    "totalTrades": 55,
+    "winRate": 43.64,
+    "realizedPnL": 1.42,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "9yrv8CDq9iLungdqe6Zhd1VDVDjFaiBjuu1wFyiqjUzc",
+    "totalTrades": 43,
+    "winRate": 0,
+    "realizedPnL": -91.94,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "2W72bQCi5DFEVsfuwjeKot4QpoRUTJasCZRb9mTemvdT",
+    "totalTrades": 21,
+    "winRate": 9.52,
+    "realizedPnL": -44.34,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "Adscgj6hragY8nVpbJF42vsxuN9RK8Gc9JT8siNfEHti",
+    "totalTrades": 55,
+    "winRate": 40,
+    "realizedPnL": 3.55,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "2rKi5kGAaKU91StAC46tMBNjZ2gi8xQ4VK6pDaGkjzEp",
+    "totalTrades": 45,
+    "winRate": 26.67,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "3q1wbC5fjKHeQQTbNhaHfbcar8F4XrcwoQfhaw8GkfiH",
+    "totalTrades": 45,
+    "winRate": 35.56,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "F3f464mGuiLRQxjwxvVwMTyuzTB6yjXLZ3ArnkDKisuD",
+    "totalTrades": 45,
+    "winRate": 0,
+    "realizedPnL": -9.93,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "ADvHGVi1B1TvEHYMfSKhT342HU1KzWzxNscC2bX3jkrL",
+    "totalTrades": 39,
+    "winRate": 2.56,
+    "realizedPnL": 0.02,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "AasQTQH9oroodW5vi3uEoDuLyJDVfMz7GWehvisdGmDX",
+    "totalTrades": 45,
+    "winRate": 0,
+    "realizedPnL": 0.01,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "CeoPTrNWye2WJhUe1NSEYWvkXForMa3e4i7we5ucgYez",
+    "totalTrades": 45,
+    "winRate": 95.56,
+    "realizedPnL": 1.25,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7AQAu43vQB9DVNjCXAVBXz6rPzZgifRjbWQodYX7cRJB",
+    "totalTrades": 45,
+    "winRate": 11.11,
+    "realizedPnL": 8.58,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "GEe8eQ1cBH8cXX2Nba4xFhKMpH9KxSre3c3uMVD5yXRJ",
+    "totalTrades": 41,
+    "winRate": 0,
+    "realizedPnL": 0.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "4jBHJJhK1iizVeYdH5Kz6oShrpJWVrSJkwtTBiiALAer",
+    "totalTrades": 45,
+    "winRate": 0,
+    "realizedPnL": 0.65,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "3FLi39QpEuYZL6YEnefLTpaifd4EFXMtQP7M5Vy91qwF",
+    "totalTrades": 45,
+    "winRate": 88.89,
+    "realizedPnL": 0.5,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "2fWyMU2S5ZJMwq9Ay2bwvnfRfiugkJbjWZ8WqKMtD8my",
+    "totalTrades": 45,
+    "winRate": 6.67,
+    "realizedPnL": 0.15,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "4Mp8GYPwzssYk1Z7qtbGieTU4NrZbPRM2bk4cnBSutCP",
+    "totalTrades": 10,
+    "winRate": 0,
+    "realizedPnL": 0.3,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "H6syBaR1qEA7BZ8JKxbJKwPwip6EnfjPAKCzKKW6pzNV",
+    "totalTrades": 8,
+    "winRate": 50,
+    "realizedPnL": 26.62,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+    "totalTrades": 45,
+    "winRate": 4.44,
+    "realizedPnL": 0.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "8L2y55D11k63CAftvW7uMM2mBhtMxLoLnivG9uY2bt8j",
+    "totalTrades": 45,
+    "winRate": 46.67,
+    "realizedPnL": 0.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "bobCPc5nqVoX7r8gKzCMPLrKjFidjnSCrAdcYGCH2Ye",
+    "totalTrades": 45,
+    "winRate": 0,
+    "realizedPnL": 0.56,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+    "totalTrades": 45,
+    "winRate": 0,
+    "realizedPnL": 0.06,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "ENnG5ocy38TBZGCnoEwE2dpgYnPpjvvNxBstAjYje43j",
+    "totalTrades": 24,
+    "winRate": 41.67,
+    "realizedPnL": 58.65,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "b23Ke4utbwr1WcY8onbybJbNQghkNs7RrEC9f69VbJW",
+    "totalTrades": 35,
+    "winRate": 17.14,
+    "realizedPnL": 0.11,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "8ECaGWdoJnvh6jECAjNWiWm7WvLPTgTsx3iEAxD5j6Vi",
+    "totalTrades": 17,
+    "winRate": 64.71,
+    "realizedPnL": 0.01,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "FE2MHWLTSmndBUWbbtmnfUfoKrn9NKtDCDGxCPG2h9Dy",
+    "totalTrades": 35,
+    "winRate": 17.14,
+    "realizedPnL": 0.22,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "2N7j1iuRpxv3fJkA1qTjJpMJtUQkRaXfHZmU924XWhJd",
+    "totalTrades": 25,
+    "winRate": 0,
+    "realizedPnL": -25.19,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5ro3ghBQ3GUq7dfiQ1NpN4yZFsvWNHaLaUSsUYgmvZfk",
+    "totalTrades": 25,
+    "winRate": 12,
+    "realizedPnL": 0.36,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "j1oAbxxiDUWvoHxEDhWE7THLjEkDQW2cSHYn2vttxTF",
+    "totalTrades": 25,
+    "winRate": 24,
+    "realizedPnL": -0.05,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "B7gNMR1gmpNimP4Dwh3u4ufNqWqAhmX4YAwDw4spK1JS",
+    "totalTrades": 9,
+    "winRate": 11.11,
+    "realizedPnL": -99.97,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "K89C5ELTX98KiKET8PQCqe15NzogVgo9QqixYtuH4ok",
+    "totalTrades": 17,
+    "winRate": 29.41,
+    "realizedPnL": 0.97,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "CBWLfrTMmtnG1Ff1pSQrc1LKmP2tLGA5NHjjGJwDtQms",
+    "totalTrades": 25,
+    "winRate": 36,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "ADd3M8FyNAXcbV6ofAgfPSFZpXJcSXmJa8hPWTddd6by",
+    "totalTrades": 25,
+    "winRate": 0,
+    "realizedPnL": -7.28,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe",
+    "totalTrades": 25,
+    "winRate": 12,
+    "realizedPnL": 0.11,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "AYnY9F3PKUkAn8c4zLKbbVGTwUeoPsJ6MLw97tnomFiN",
+    "totalTrades": 17,
+    "winRate": 47.06,
+    "realizedPnL": 0.09,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
+    "totalTrades": 15,
+    "winRate": 46.67,
+    "realizedPnL": 0.31,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7of9rX4qvtMQFYKi3x64PPzC3EqY1759bJENHzSp4BMU",
+    "totalTrades": 15,
+    "winRate": 6.67,
+    "realizedPnL": 0.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "Eou9yU6kmY3PLTD5oFxqNGCuMaGDF3jYZBd3VrbcSNmY",
+    "totalTrades": 15,
+    "winRate": 0,
+    "realizedPnL": 0.16,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "9CXNmcRzZenixwtzAEVA3Jdo3yC6Hscxcpa4R7tQ6tTV",
+    "totalTrades": 15,
+    "winRate": 0,
+    "realizedPnL": 1.15,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "zPrm39Aa8goqjfS8a3EKcr3g9MduCWfDCD3cHxZn5UT",
+    "totalTrades": 15,
+    "winRate": 40,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7JLugZDRpGCDQKWP7vbnWgxGXch1vvbZzrMGk5QZzi6x",
+    "totalTrades": 7,
+    "winRate": 0,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "kip312wW3Wh9TLMcU2xmu2eBSJp16JNLps6NwPLdrtq",
+    "totalTrades": 15,
+    "winRate": 13.33,
+    "realizedPnL": 0.02,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "BusorJjvjEh98VbSdxVU86xLp5kug8achJHaXee3E6AX",
+    "totalTrades": 15,
+    "winRate": 0,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "FvXfCMWiBEsVs69MtnWwAPtFJFyo3pnfrDarzMsWxG5o",
+    "totalTrades": 10,
+    "winRate": 40,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "Az1MYmeBbws6TzWXKsQi9f7DXkoqBdc2t7eEqpbvcEuV",
+    "totalTrades": 15,
+    "winRate": 0,
+    "realizedPnL": 5.01,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "3CdKPbXfvxzRy9qWp3BEncUyLWUoYdgntBarYDw9QwQt",
+    "totalTrades": 6,
+    "winRate": 16.67,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5DiM1MydYseSwowyE4fsvQCmEnCfiPJmKL2tP61m1NCE",
+    "totalTrades": 6,
+    "winRate": 0,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "HxjwdF326ZunmUwC1iXhfgL3ku78YsksN6n7Rfxzwr6b",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "D1ma7pPyAYsGwoKRDheJE2nhYp1fF97MdcYNAK7iRvfB",
+    "totalTrades": 5,
+    "winRate": 60,
+    "realizedPnL": -65.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "DhNUu2rwxnsmwaLrdh6p9GoYD1Uj8YyiukZbLA2H4juy",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": -0.01,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5fZpiHnGMdC6u84iMmwbMNsrmdytXWmHwbRJy7iwnPcF",
+    "totalTrades": 5,
+    "winRate": 60,
+    "realizedPnL": -99.83,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "8ef3mWgPYtXUHTjUY5ybwtd3Hu3A7bh5ReZZjbEf4xoH",
+    "totalTrades": 5,
+    "winRate": 20,
+    "realizedPnL": -28.36,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "A9tKNswQn3ZbRuHXWkb3aQzru9A9NdEoo3KL6Wbx5MVk",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": -99.72,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "BKpj3E3U9qSDfL5n4E1B1aHq7dueygzCMfWdTfAXzRpF",
+    "totalTrades": 4,
+    "winRate": 25,
+    "realizedPnL": -97.85,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7bDXepCazxQFTmJqJM62ZR977GUpVKCmbo6CuFazqg1b",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": 2043.86,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "9HcybHjeF9yKnp5u4V82MSHc5e2HBEg2iVBq2NGjchmG",
+    "totalTrades": 5,
+    "winRate": 40,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "HnTCPyYr2q8N8w6iuo3ee7ygXh1a5wwJUzDLX1S6nur1",
+    "totalTrades": 5,
+    "winRate": 20,
+    "realizedPnL": -2.7,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "6U1nMDhRsSixD5MbRnvKkqCHSZJtrLXpFRpcvqDVZcLv",
+    "totalTrades": 5,
+    "winRate": 60,
+    "realizedPnL": -99.42,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "ChLVNdtHP3aipHMWRgL3AxEXnSKoMSTmCQgFH1QeYmEY",
+    "totalTrades": 5,
+    "winRate": 20,
+    "realizedPnL": -0.02,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "Gbb1RAJ4x5oYp78qbLrj98nSp4g8n6QWwD6RSERrRmWh",
+    "totalTrades": 5,
+    "winRate": 20,
+    "realizedPnL": 889.17,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "6b28PCiNvjBuw7D48zw7nH8EmksfqozYmoAVZM7uCxmX",
+    "totalTrades": 5,
+    "winRate": 60,
+    "realizedPnL": -92.58,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "6Hxg5M25sh5XdRe3GiJETh2srywF8AVsB3jhsSXGiQ91",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": -90.27,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "FwgHQmeo3jJdnFrSNULfcn84xNSopaWCziuGAaoeb4C2",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": 1234.5,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "C4hFFAMhkoEExVphXyPazjZoYaJqQGKVN4Yg2gTNwRVu",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "3SkvC6sTbNTJgR6bxxiW7ZQaBsNpLiPACP3ki5VF7dQe",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": -99.95,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "EATZydKKrXdYntWXhZ69PspogXTyoN59K88dkm6wqQPH",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": 0,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5enYkRXcVLV3W1ga6xhzknXKQ8SPYz11GUknRwbLSAo5",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": -0.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "GHMtWb5gVMViQiXJtYPcPiwqC9MULu4SZaQFLToL64yJ",
+    "totalTrades": 5,
+    "winRate": 40,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "DP18kicUbzJpeHx2hVhQgj5p7mQUcxQV896QHFw8Uzsi",
+    "totalTrades": 2,
+    "winRate": 0,
+    "realizedPnL": -100,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "9h6qDbRaBhMfeqQnFfqibjKZWaVHDPBW16NRg1Qdb6SA",
+    "totalTrades": 3,
+    "winRate": 33.33,
+    "realizedPnL": -70.12,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "HW2Cg9ZYRGZRzXfdgc1pgGxdYduyVvYrYkg1H2PVLo1H",
+    "totalTrades": 5,
+    "winRate": 60,
+    "realizedPnL": -0.04,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5mFMj8Ep3kz2Ap2Mu9JxLgvmLMBHF8FwSnYX61PH6oTf",
+    "totalTrades": 5,
+    "winRate": 80,
+    "realizedPnL": -80.06,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "5zFYAt8NrikPwwVeNRjuEAMn6tbYNVkLEesysgXbkspH",
+    "totalTrades": 5,
+    "winRate": 0,
+    "realizedPnL": 0.06,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "Cgo9rjuH9jRZUAMfPsN8gYhJHCLJvcqMBgriZxzK4Sjx",
+    "totalTrades": 5,
+    "winRate": 40,
+    "realizedPnL": 13.18,
+    "qualifies": false
+  },
+  {
+    "walletAddress": "7eCn5qKHiNqYwXoY8FQCxFLvACQPnPXDMhoywekUs93k",
+    "totalTrades": 5,
+    "winRate": 100,
+    "realizedPnL": -1.22,
+    "qualifies": false
+  }
+]

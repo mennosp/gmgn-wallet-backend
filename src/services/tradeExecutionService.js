@@ -1,34 +1,59 @@
-const { Connection, Keypair, VersionedTransaction } = require('@solana/web3.js');
-const bs58 = require('bs58');
 const axios = require('axios');
+const { logTrade } = require('./tradeLogger');
 
-const JUPITER_SWAP_API = 'https://quote-api.jup.ag/v6/swap';
+const QUICKNODE_JUPITER_ENDPOINT = 'https://late-white-general.solana-mainnet.quiknode.pro/f2c21ff88d4240dba89e327da10df585dc8070ef/jupiter';
 
-async function executeSwap(privateKey, tokenIn, tokenOut, amountIn) {
+const executeTrade = async ({ walletPublicKey, inputMint, outputMint, amount }) => {
   try {
-    const connection = new Connection('https://api.mainnet-beta.solana.com', 'confirmed');
-    const wallet = Keypair.fromSecretKey(bs58.decode(privateKey));
-
-    const response = await axios.post(JUPITER_SWAP_API, {
-      inputMint: tokenIn,
-      outputMint: tokenOut,
-      amount: amountIn * 1e9, // Convert SOL to lamports (adjust decimals for other tokens accordingly)
-      userPublicKey: wallet.publicKey.toBase58(),
-      slippageBps: 50, // 0.5% slippage
+    const response = await axios.get(`${QUICKNODE_JUPITER_ENDPOINT}/quote`, {
+      params: {
+        inputMint,
+        outputMint,
+        amount,
+        slippageBps: 50,
+        onlyDirectRoutes: false,
+      },
+      headers: {
+        'Accept': 'application/json',
+      },
     });
 
-    const swapTransaction = response.data.swapTransaction;
-    const transaction = VersionedTransaction.deserialize(Buffer.from(swapTransaction, 'base64'));
-    transaction.sign([wallet]);
+    const quoteResponse = response.data;
 
-    const txid = await connection.sendTransaction(transaction, { maxRetries: 3 });
-    await connection.confirmTransaction(txid);
+    if (!quoteResponse || !quoteResponse.outAmount) {
+      throw new Error('No available quote from QuickNode Jupiter endpoint.');
+    }
 
-    return { success: true, txid };
+    await logTrade({
+      walletPublicKey,
+      inputMint,
+      outputMint,
+      inputAmount: amount,
+      outputAmount: quoteResponse.outAmount,
+      slippageBps: 50,
+      routeDetails: quoteResponse.routePlan,
+      status: 'quoted',
+    });
+
+    return {
+      success: true,
+      quoted: true,
+      quote: quoteResponse,
+    };
   } catch (error) {
-    console.error('Error during Jupiter swap execution:', error.response?.data || error.message);
-    throw new Error(error.response?.data?.error || error.message);
-  }
-}
+    console.error('QuickNode Jupiter API Error:', error.response?.data || error.message);
 
-module.exports = { executeSwap };
+    await logTrade({
+      walletPublicKey,
+      inputMint,
+      outputMint,
+      inputAmount: amount,
+      status: 'failed',
+      error: error.response?.data || error.message,
+    });
+
+    throw error;
+  }
+};
+
+module.exports = { executeTrade };

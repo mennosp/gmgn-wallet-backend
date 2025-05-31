@@ -1,43 +1,50 @@
-const { Connection, PublicKey } = require('@solana/web3.js');
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const QUICKNODE_RPC_URL = process.env.QUICKNODE_RPC_URL;
-const connection = new Connection(QUICKNODE_RPC_URL, { 
-  commitment: 'confirmed', 
-  maxSupportedTransactionVersion: 0 
-});
+import { Connection, PublicKey } from '@solana/web3.js';
 
-async function analyzeWallet(walletAddress) {
-  const publicKey = new PublicKey(walletAddress);
+// Initialize Solana connection using QuickNode RPC URL
+const connection = new Connection(process.env.QUICKNODE_RPC_URL, 'confirmed');
 
-  const signatures = await connection.getSignaturesForAddress(publicKey, { limit: 100 });
+// Analyze wallet function
+export async function analyzeWallet(walletAddress) {
+  try {
+    const publicKey = new PublicKey(walletAddress);
 
-  let totalTrades = signatures.length;
-  let wins = 0;
+    // Fetch recent transaction signatures (up to 20)
+    const signatures = await connection.getSignaturesForAddress(publicKey, { limit: 20 });
 
-  for (const sig of signatures) {
-    const txDetails = await connection.getParsedTransaction(sig.signature, {
-      commitment: 'confirmed',
-      maxSupportedTransactionVersion: 0
-    });
+    if (!signatures.length) {
+      return { error: 'No recent transactions found for this wallet.' };
+    }
 
-    if (!txDetails) continue;
+    // Retrieve parsed transaction details
+    const transactions = await Promise.all(
+      signatures.map(sig => 
+        connection.getParsedTransaction(sig.signature, { maxSupportedTransactionVersion: 0 })
+      )
+    );
 
-    let preBalance = txDetails.meta.preBalances.reduce((a, b) => a + b, 0);
-    let postBalance = txDetails.meta.postBalances.reduce((a, b) => a + b, 0);
+    // Filter out null transactions and format trades
+    const trades = transactions
+      .filter(Boolean)
+      .map(tx => ({
+        signature: tx.transaction.signatures[0],
+        date: new Date(tx.blockTime * 1000).toISOString(),
+        instructions: tx.transaction.message.instructions,
+        fee: tx.meta.fee,
+        status: tx.meta.err ? 'Failed' : 'Successful'
+      }));
 
-    if (postBalance > preBalance) wins += 1;
+    return {
+      wallet: walletAddress,
+      totalTransactions: signatures.length,
+      totalTradesAnalyzed: trades.length,
+      recentTrades: trades.slice(0, 5),
+    };
+    
+  } catch (error) {
+    console.error('Wallet analysis error:', error);
+    return { error: `Analysis failed: ${error.message}` };
   }
-
-  const winRate = totalTrades ? ((wins / totalTrades) * 100).toFixed(2) : "0.00";
-
-  return {
-    wallet: walletAddress,
-    winRate,
-    totalTrades
-  };
 }
-
-module.exports = {
-  analyzeWallet
-};
